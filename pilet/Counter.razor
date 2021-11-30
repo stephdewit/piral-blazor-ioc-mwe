@@ -1,10 +1,13 @@
 @page "/counter"
 
+@inject IClockService clockService
+
 <div>
     <p>Current count: @counter</p>
     <p>
         <button @onclick="Increment">Increment</button>
     </p>
+    <p>@clockService.Now()</p>
 </div>
 
 @code {
