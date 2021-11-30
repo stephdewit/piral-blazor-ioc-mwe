@@ -14,6 +14,13 @@ namespace pilet
 		{
 			services.AddSingleton<IClockService, ClockService>();
 		}
+
+		public static void ConfigureShared(IServiceCollection services)
+		{
+			// Looks like this method is never called
+
+			// services.AddSingleton<IClockService, ClockService>();
+		}
 	}
 
 	public class ClockService : IClockService
